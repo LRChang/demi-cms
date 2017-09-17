@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理主页</title>
+    <link href="../layui/css/layui.css" type="text/css" rel="stylesheet">
+    <link href="../css/index.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquery-1.8.2.min.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../layui/layui.js"></script>
+    <!--<script src="../layui/lay/dest/layui.all.js"></script>-->
+    <script src="../js/common.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="main-title">
+    <div class="logo">
+        <img src="../imgs/logo.png">
+        <div class="logo-word">
+            <div>零食商贩</div>
+            <div>Snack Petty Vendor</div>
+        </div>
+    </div>
+    <div class="left-box">
+        <a class="register" id="login-out" title="退出">退出</a>
+    </div>
+</div>
+
+<div class="main-left">
+    <ul class="layui-nav layui-nav-tree" lay-filter="main-menu">
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">基础管理</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;" class="main-menu-item" data-title="订单管理" data-id="orders" data-url="order.html">
+                        <i class="layui-icon">&#xe63c;</i>
+                        订单列表
+                    </a>
+                </dd>
+                <dd>
+                    <a href="javascript:;" class="main-menu-item" data-title="商品管理" data-id="products" data-url="product.html">
+                        <i class="layui-icon">&#xe630;</i>
+                        商品列表
+                    </a>
+                </dd><dd>
+                    <a href="javascript:;" class="main-menu-item" data-title="添加商品" data-id="add-product" data-url="add-product.html?id=34&">
+                        <i class="layui-icon">&#xe630;</i>
+                        添加商品
+                    </a>
+                </dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">其它管理</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a href="javascript:;">
+                        待添加一
+                    </a>
+                </dd>
+                <dd>
+                    <a href="javascript:;">
+                         待添加二
+                    </a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+<div class="main-right">
+    <div class="layui-tab" lay-filter="page-container" id="page-container" lay-allowclose="true">
+        <ul class="layui-tab-title">
+        </ul>
+        <div class="layui-tab-content">
+        </div>
+    </div>
+</div>
+
+<script src="../js/index.js" type="application/javascript"></script>
+</body>
+</html>

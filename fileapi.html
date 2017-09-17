@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="./js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+
+function selfile(obj) {
+   var pic = document.getElementsByTagName('input')[1].files[0];
+   document.getElementById('textfield').value=obj.value;
+   console.log(pic);
+    var debug = document.getElementById('debug');
+    var cont = '';
+    cont += '文件名称:' + pic.name + '<br />';
+    cont += '文件大小' + pic.size + '<br />';
+    debug.innerHTML = cont;
+
+    var tmpimg = document.createElement('img');
+    tmpimg.src = window.URL.createObjectURL(pic); // 把二进制对象直接读成浏览器显示的资源
+    document.getElementsByTagName('body')[0].appendChild(tmpimg);
+
+}
+
+$(function(){
+    $('.upload').on('click',function(){
+       console.log($('#selector').val());
+
+    });
+});
+</script>
+
+<style type="text/css">
+img {
+width:200px;
+}
+.btn{
+    background-color:#449D44;
+    color:#fff;
+    text-align: center;
+    cursor: pointer;
+    padding:8px 15px;
+    font-size: 14px;
+    border:0 none;
+    text-indent: 0;
+    display: inline-block;
+}
+.btn:hover{
+    background-color: #1f8b09;
+}
+.btn:focus{
+    background-color: #1f8b09;
+    outline: thin dotted #fff;
+    outline-offset: -2px;  
+}
+input{
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    font-size: 16px;
+    padding: 6px 0 6px;
+    vertical-align: middle;
+    
+    margin:5px 0;
+    text-indent: 6px;
+}
+textarea:hover{
+    border:1px solid rgba(82, 168, 236, 0.8);    
+}
+textarea{
+    padding:6px;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border:1px solid rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    /*
+    border:1px solid #f69;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 102, 153, 0.6);
+    */
+}
+.file{
+    width:60px;
+    opacity: 0;
+    cursor: pointer;
+    filter:alpha(opacity:0);
+    position: absolute;
+    padding:0;
+    text-indent: 0;
+    margin-top:8px;
+}
+</style>
+</head>
+    <body>
+
+    <input type="text" id='textfield'/>
+    <input type="file" name="image" onchange="selfile(this);" class='file' id="selector"/>
+    <input type="button" value='选择图片' class='btn'/>
+    <input type="button" value='上传' class='upload btn'/>
+    <div id="debug"></div>
+    </body>
+</html>

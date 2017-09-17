@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../layui/css/layui.css" type="text/css" rel="stylesheet">
+    <link href="../css/order.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquery-1.8.2.min.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script src="../layui/layui.js"></script>
+    <!--<script src="../layui/lay/dest/layui.all.js"></script>-->
+    <script src="../js/common.js" type="application/javascript"></script>
+</head>
+<body>
+
+<div>
+    <button class="layui-btn layui-btn-primary" onclick="location.reload();">
+        <i class="layui-icon">&#x1002;</i>
+        刷新页面
+    </button>
+
+</div>
+
+
+<div class="layui-form">
+    <table class="layui-table">
+        <thead>
+            <tr>
+                <th>订单号</th>
+                <th>商品名称</th>
+                <th>商品总数</th>
+                <th>商品总价格</th>
+                <th>订单状态</th>
+                <th>下单时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="order-table">
+        </tbody>
+    </table>
+</div>
+
+<div class="more">
+    <button class="layui-btn layui-btn-primary load-more">
+        <i class="layui-icon">&#xe61a;</i>
+        加载更多
+    </button>
+    <button class="layui-btn layui-btn-primary no-more">
+        <i class="layui-icon">&#xe650;</i>
+        没有更多了
+    </button>
+</div>
+
+
+<script src="../js/order.js" type="application/javascript"></script>
+</body>
+</html>

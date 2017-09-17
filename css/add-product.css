@@ -1,0 +1,23 @@
+.main-img{
+    width:300px;
+    overflow: hidden;
+    margin: 20px 0;
+    display: none;
+    border:1px solid #ccc;
+}
+
+.detail-img{
+    width:500px;
+    overflow: hidden;
+    margin: 20px 0;
+    display: none;
+    border:1px solid #ccc;
+}
+
+.main-img img{
+    width:100%;
+}
+
+.detail-img img{
+    width:100%;
+}

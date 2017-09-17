@@ -1,0 +1,14 @@
+.more .load-more{
+    margin-top: 10px;
+    margin-left: 45%;
+}
+
+.more .no-more{
+    display: none;
+    margin-top: 10px;
+    margin-left: 45%;
+}
+
+.hide_box{
+    display: none;
+}
